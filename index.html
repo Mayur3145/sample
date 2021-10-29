@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Details of Student</title>
+    </head>
+
+    <style>
+    body{
+        background:rgb(46, 241, 255);
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px #000000;  
+    }
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        .heading{
+            font-size: 3em; 
+            letter-spacing: -2px; 
+            border-bottom: 2px solid white; 
+            text-transform: uppercase;
+        }
+
+        h3{
+            font-size:30px;
+        }
+
+    </style>
+
+    <body align="center">
+        <h1 class="heading">
+            Creation of a student object and printing the details of the student in the JavaScript.
+        </h1>
+        <p><i>Output At Console</i></p>
+        <h3 >Print<br> Student <br>Details</h3>
+        <table align="center">
+            <tr>
+              <th>Name of Student</th>
+              <th>Class of Student</th>
+              <th>Roll Number of Student</th>
+            </tr>
+            <tr>
+              <td id="printName"></td>
+              <td id="printClass"></td>
+              <td id="printRoll"></td>
+            </tr>
+        </table>
+        <p>Check your Roll Number here</p>
+        <input id="checkError" type="text" value="" style="border-radius:20px;outline:none"placeholder="Enter Roll No"/>
+        <button type="submit" style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
+    </body>
+    <script src="student.js"></script>
+</html>
