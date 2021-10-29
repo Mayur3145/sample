@@ -43,7 +43,7 @@ function onSubmit(token) {
 function onClick(e) {
     e.preventDefault();
     grecaptcha.ready(function() {
-      grecaptcha.execute('6LdY3gAdAAAAAHIjqLl_KWnVelgnbm0rLTKsaHbD', {action: 'submit'}).then(function(token) {
+      grecaptcha.execute('6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1', {action: 'submit'}).then(function(token) {
           // Add your logic to submit to your backend server here.
       });
     });
