@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Details of Student</title>
-        <script src="https://www.google.com/recaptcha/api.js?render=6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
     </head>
@@ -59,10 +59,11 @@
         <button type="submit" style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
 
 
-        <button class="g-recaptcha" 
-        data-sitekey="6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
     </body>
     <script src="student.js"></script>
 </html>
