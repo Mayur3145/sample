@@ -36,15 +36,4 @@ function checkError() {
         alert("Valid Input");
     }
 }
-function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
 
-function onClick(e) {
-    e.preventDefault();
-    grecaptcha.ready(function() {
-      grecaptcha.execute('6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1', {action: 'submit'}).then(function(token) {
-          // Add your logic to submit to your backend server here.
-      });
-    });
-  }
