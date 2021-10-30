@@ -35,6 +35,23 @@ function checkError() {
     else {
         alert("Valid Input");
     }
+    
+    var recaptcha_response = '';
+
+    if(recaptcha_response.length == 0) {
+        alert("You can't proceed!");
+        return false;
+    }
+    else{
+        alert("proceed!");
+        return true;
+    }
+
+ 
+function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+}
 }
 
 
