@@ -38,9 +38,38 @@
 
     <body align="center">
         <form method="post" onsubmit="return submitUserForm();">
-    <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo" data-callback="verifyCaptcha"></div>
+        
+        <h1 class="heading">
+            Creation of a student object and printing the details of the student in the JavaScript.
+        </h1>
+        <p><i>Output At Console</i></p>
+        <h3 >Print<br> Student <br>Details</h3>
+        <table align="center">
+            <tr>
+              <th>Name of Student</th>
+              <th>Class of Student</th>
+              <th>Roll Number of Student</th>
+            </tr>
+            <tr>
+              <td id="printName"></td>
+              <td id="printClass"></td>
+              <td id="printRoll"></td>
+            </tr>
+        </table>
+        <p>Check your Roll Number here</p>
+        <input id="checkError" type="text" value="" style="border-radius:20px;outline:none"placeholder="Enter Roll No"/>
+            
+            
+        <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo" data-callback="verifyCaptcha"></div>
     <div id="g-recaptcha-error"></div>
-    <button type="submit" name="submit" value="Submit" />
+        <button type="submit" name="submit" value="Submit"  style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
+        
+        
+        
+        
+        
+    
+    
 </form>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script>
