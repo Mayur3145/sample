@@ -36,7 +36,7 @@ function checkError() {
         alert("Valid Input");
     }
     
-    var captchResponse = $('#g-recaptcha-response').val();
+    var captchResponse = $('.g-recaptcha-response').val();
 if(captchResponse.length == 0 )
     alert("Please verify that you are a Human.");
 else 
