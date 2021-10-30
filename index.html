@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Details of Student</title>
 
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     </head>
 
@@ -60,21 +60,13 @@
         <input id="checkError" type="text" value="" style="border-radius:20px;outline:none"placeholder="Enter Roll No"/>
         <button type="submit" name="submit" value="Submit"  style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
 
-            <form method="post" onsubmit="return submitUserForm();">
-            
-        <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo" data-callback="verifyCaptcha"></div>
-    <div id="g-recaptcha-error"></div>
-        
-        
-        
-        
-        
-    
-    
-</form>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+            <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
 
-</script>
+
     </body>
     <script src="student.js"></script>
 </html>
