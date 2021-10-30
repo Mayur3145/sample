@@ -37,6 +37,7 @@
     </style>
 
     <body align="center">
+        <form action="?" method="POST">
         <h1 class="heading">
             Creation of a student object and printing the details of the student in the JavaScript.
         </h1>
@@ -56,12 +57,12 @@
         </table>
         <p>Check your Roll Number here</p>
         <input id="checkError" type="text" value="" style="border-radius:20px;outline:none"placeholder="Enter Roll No"/>
-        <button type="submit" style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
+        <button type="submit" value="submit" style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
 
 
-        <form action="?" method="POST">
-      <div class="g-recaptcha" data-type="image" data-sitekey="6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1"></div>
-      <br/>
+        
+      <div id="html_element"></div>
+      <br>
       
     </form>
     </body>
