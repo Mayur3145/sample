@@ -24,18 +24,4 @@ document.getElementById("printName").innerHTML = student2.uname;
 document.getElementById("printClass").innerHTML = student2.className;
 document.getElementById("printRoll").innerHTML = student2.rollNo;
 
-var onloadCallback = function() {
-	grecaptcha.render('html_element', {
-    'sitekey' : '6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo'
-  });
-};
-onloadCallback();
 
-$('form').on('submit', function(e) {
-  if(grecaptcha.getResponse() == "") {
-    e.preventDefault();
-    alert("You can't proceed!");
-  } else {
-    alert("Thank you");
-  }
-});
