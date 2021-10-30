@@ -39,34 +39,27 @@
     <body align="center">
         
         
-        <h1 class="heading">
-            Creation of a student object and printing the details of the student in the JavaScript.
-        </h1>
-        <p><i>Output At Console</i></p>
-        <h3 >Print<br> Student <br>Details</h3>
-        <table align="center">
-            <tr>
-              <th>Name of Student</th>
-              <th>Class of Student</th>
-              <th>Roll Number of Student</th>
-            </tr>
-            <tr>
-              <td id="printName"></td>
-              <td id="printClass"></td>
-              <td id="printRoll"></td>
-            </tr>
-        </table>
-        <p>Check your Roll Number here</p>
-        <input id="checkError" type="text" value="" style="border-radius:20px;outline:none"placeholder="Enter Roll No"/>
-<form action="?" method="POST">
-            
-      <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo"></div>
-      <br/>
-      
-                    <button type="submit" name="submit" value="Submit"  style="border-radius:20px;outline:none;background:red; color:white;" onclick="return checkError()">Check</button>
-
-    </form>
-
+        <form method="post" onsubmit="return submitUserForm();">
+    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="verifyCaptcha"></div>
+    <div id="g-recaptcha-error"></div>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+var recaptcha_response = '';
+function submitUserForm() {
+    if(recaptcha_response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        return false;
+    }
+    return true;
+}
+ 
+function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+}
+</script>
 
     </body>
     <script src="student.js"></script>
