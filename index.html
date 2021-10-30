@@ -49,10 +49,14 @@
 var recaptcha_response = '';
 function submitUserForm() {
     if(recaptcha_response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        alert("Invalid Input");
+        
         return false;
     }
+    else{
+        alert("ok");
     return true;
+    }
 }
  
 function verifyCaptcha(token) {
