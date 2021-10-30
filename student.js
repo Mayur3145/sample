@@ -26,7 +26,7 @@ document.getElementById("printRoll").innerHTML = student2.rollNo;
 
 var onloadCallback = function() {
 	grecaptcha.render('html_element', {
-    'sitekey' : '6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1'
+    'sitekey' : '6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo'
   });
 };
 onloadCallback();
