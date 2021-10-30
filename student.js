@@ -24,6 +24,13 @@ document.getElementById("printName").innerHTML = student2.uname;
 document.getElementById("printClass").innerHTML = student2.className;
 document.getElementById("printRoll").innerHTML = student2.rollNo;
 
+var onloadCallback = function() {
+	grecaptcha.render('html_element', {
+    'sitekey' : '6Ldg-gAdAAAAAPsgL-6ysXD--pNiigBsuQjH1Wk1'
+  });
+};
+onloadCallback();
+
 function checkError() {
     const value = document.getElementById("checkError").value;
     alert(value);
@@ -36,4 +43,13 @@ function checkError() {
         alert("Valid Input");
     }
 }
+
+$('form').on('submit', function(e) {
+  if(grecaptcha.getResponse() == "") {
+    e.preventDefault();
+    alert("You can't proceed!");
+  } else {
+    alert("Thank you");
+  }
+});
 
