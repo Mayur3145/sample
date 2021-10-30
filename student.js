@@ -24,4 +24,17 @@ document.getElementById("printName").innerHTML = student2.uname;
 document.getElementById("printClass").innerHTML = student2.className;
 document.getElementById("printRoll").innerHTML = student2.rollNo;
 
+function checkError() {
+    const value = document.getElementById("checkError").value;
+    alert(value);
+
+    if (isNaN(value) || value == 0) {
+        alert("Invalid Input");
+        throw new Error("Invalid Input");
+    } 
+    else {
+        alert("Valid Input");
+    }
+}
+
 
