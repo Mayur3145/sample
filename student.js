@@ -36,11 +36,7 @@ function checkError() {
         alert("Valid Input");
     }
     
-    var captchResponse = document.getElementByClass("g-recaptcha-response").val();
-if(captchResponse.length == 0 )
-    alert("Please verify that you are a Human.");
-else 
-    alert("ok");
 }
+
 
 
