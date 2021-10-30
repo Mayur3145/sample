@@ -36,22 +36,11 @@ function checkError() {
         alert("Valid Input");
     }
     
-    var recaptcha_response = '';
-
-    if(recaptcha_response.length == 0) {
-        alert("You can't proceed!");
-        return false;
-    }
-    else{
-        alert("proceed!");
-        return true;
-    }
-
- 
-function verifyCaptcha(token) {
-    recaptcha_response = token;
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-}
+    var captchResponse = $('#g-recaptcha-response').val();
+if(captchResponse.length == 0 )
+    alert("Please verify that you are a Human.");
+else 
+    alert("ok");
 }
 
 
