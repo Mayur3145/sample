@@ -31,19 +31,6 @@ var onloadCallback = function() {
 };
 onloadCallback();
 
-function checkError() {
-    const value = document.getElementById("checkError").value;
-    alert(value);
-
-    if (isNaN(value) || value == 0) {
-        alert("Invalid Input");
-        throw new Error("Invalid Input");
-    } 
-    else {
-        alert("Valid Input");
-    }
-}
-
 $('form').on('submit', function(e) {
   if(grecaptcha.getResponse() == "") {
     e.preventDefault();
@@ -52,4 +39,3 @@ $('form').on('submit', function(e) {
     alert("Thank you");
   }
 });
-
